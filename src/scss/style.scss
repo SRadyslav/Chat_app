@@ -1,0 +1,61 @@
+@import './variables';
+
+
+.formContainer{
+    background-color: $background;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .formWrapper{
+        background: white;
+        padding: 20px 60px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+
+        .logo{
+            color: $text;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .title{
+            color: $text;
+            font-size: 12px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            input{
+                padding: 15px;
+                border: none;
+                width: 250px;
+                border-bottom: 1px solid $background;
+            &::placeholder{
+                color: rgb(175, 175, 175);
+            }
+            }
+            
+            button{
+                background-color: $button;
+                color: white;
+                padding: 10px;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        p{
+            color: $text;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    }
+}

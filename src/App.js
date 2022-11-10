@@ -1,8 +1,12 @@
+import React from 'react'
+import { Register } from './pages/Register';
+import './scss/style.scss'
+
 function App() {
   return (
-    <div>
-      Hello world!
-    </div>
+    <>
+      <Register />
+    </>
   );
 }
 
