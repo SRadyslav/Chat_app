@@ -4,7 +4,7 @@ import { auth } from '../firebase'
 import {useNavigate, Link} from 'react-router-dom';
 
 export const Login = () => {
-  const [err, setErr] = React.useState('')
+  const [err, setErr] = React.useState(false)
   const [loading, setLoading] = React.useState(false)
   const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ export const Login = () => {
       await signInWithEmailAndPassword(auth, email, password)
       navigate('/')
     } catch (err) {
-      setErr(err.message);
+      setErr(true);
       setLoading(false);
     }
   }
@@ -32,7 +32,7 @@ export const Login = () => {
           <input type='email' placeholder='Email' />
           <input type='password' placeholder='Password' />
           <button disabled={loading}>Sign In</button>
-          {err && <span>{err}</span>}
+          {err && <span>Incorrect email or password!</span>}
         </form>
         <p>You don't have an account? <Link to='/register' className='link'>Register</Link></p>
       </div>

@@ -4,18 +4,18 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { auth, storage, db } from '../firebase.js'
-import {useNavigate, Link} from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
 export const Register = () => {
   const [err, setErr] = React.useState('')
-  const [loading ,setLoading] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault()
-    const displayName = e.target[0].value;
+    const displayName = e.target[0].value.toLowerCase();
     const email = e.target[1].value;
     const password = e.target[2].value;
     const file = e.target[3].files[0];

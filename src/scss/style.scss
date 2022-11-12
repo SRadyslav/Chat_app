@@ -183,7 +183,7 @@
                         outline: none;
 
                         &::placeholder{
-                            color: lightgray;
+                            color: $white;
                         }
                     }
                 }
@@ -192,6 +192,7 @@
                 padding: 10px;
                 height: calc(100% - 205px);
                 overflow: auto;
+                
             }
 
             .userChat{
@@ -227,6 +228,8 @@
         }
         .chat{
             flex:2;
+            background-color: $text;
+            position: relative;
 
             .chatInfo{
                 height: 50px;
@@ -235,7 +238,7 @@
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
-                color: lightgray;
+                color: white;
             }
 
             .chatIcons{
@@ -246,6 +249,18 @@
                     height: 24px;
                     cursor: pointer;
                 }
+            }
+            
+            .popUp{
+                padding: 8px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                
+                border-radius: 15px;
+                color: white;
+                background-color: $purple;
             }
             
             .messages{
@@ -261,9 +276,10 @@
 
                     .messageInfo{
                         display: flex;
-                        flex-direction: column;
-                        color: grey;
-                        font-weight: 300;
+                        flex-direction:column;
+                        align-items: center;
+                        color: $black;
+                        font-weight: 400;
 
 
                         img{
@@ -297,7 +313,7 @@
                             align-items: flex-end;
 
                             p{
-                                background-color: $light;
+                                background-color: $text;
                                 color: white;
                                 border-radius: 10px 0px 10px 10px;
                             }
@@ -339,8 +355,14 @@
                     button{
                         border: none;
                         padding: 10px 15px;
+                        background-color: $text;
                         color: white;
+                        cursor: pointer;
+
+                        &:disabled{
                         background-color: $light;
+                            cursor: default;
+                        }
                     }
                 }
             }
