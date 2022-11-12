@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# R-Chat
+Chat app for real-time conversations
+
+## GitHub-Pages
+Repository is deployed on [GitHubPages](https://sradyslav.github.io/Chat_app/)
+- Email : `Dan@gmail.com`
+- Password : `dandandan`
+> You could use account that is posted above or create new. For the time being set userImage possible only with registration so don't forget about it. 
+>You can find other users only with their full nicknames(rokkuro, dan, alice, penelope - registered skeletons) penned in search bar and then click "Enter". After that your chat with this user will be created and appeared below. So you can click at appeared block to start conversation.
+>You can only bind images, so don't touch "clip". To send images write text, click at image icon, select image and click key "enter" or button "send".
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
